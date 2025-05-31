@@ -20,7 +20,7 @@ body {
   background-color: #b4b4b4;
   padding: 8px;
   border-radius: 8px;
-  align-items: center; /* vertical center icons and input */
+  align-items: center; 
 }
 
 /* Style buttons */
@@ -33,15 +33,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;    /* fixed width for uniformity */
-  height: 36px;   /* fixed height for uniformity */
+  width: 36px;    
+  height: 36px;   
   font-size: 18px;
 }
 .toolbar button:hover {
   background-color: #ccc;
 }
 
-/* Color picker styled like the buttons */
+/* Color picker */
 .toolbar input[type="color"] {
   width: 36px;
   height: 36px;
@@ -49,13 +49,12 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  /* Remove default inner padding/margin for uniform size */
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-/* Remove the default color picker icon background in some browsers */
+
 .toolbar input[type="color"]::-webkit-color-swatch-wrapper {
   padding: 0;
 }
