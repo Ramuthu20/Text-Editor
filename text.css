@@ -1,0 +1,87 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 20px;
+}
+.main-box {
+  max-width: 1000px;
+  margin: auto;
+  background: rgb(219, 213, 213);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* Toolbar */
+.toolbar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  background-color: #b4b4b4;
+  padding: 8px;
+  border-radius: 8px;
+  align-items: center; /* vertical center icons and input */
+}
+
+/* Style buttons */
+.toolbar button {
+  padding: 6px 10px;
+  border: none;
+  background-color: #ecf0f585;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;    /* fixed width for uniformity */
+  height: 36px;   /* fixed height for uniformity */
+  font-size: 18px;
+}
+.toolbar button:hover {
+  background-color: #ccc;
+}
+
+/* Color picker styled like the buttons */
+.toolbar input[type="color"] {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  /* Remove default inner padding/margin for uniform size */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Remove the default color picker icon background in some browsers */
+.toolbar input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+.toolbar input[type="color"]::-webkit-color-swatch {
+  border-radius: 5px;
+}
+
+/* Editable text area */
+#editor {
+  min-height: 300px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #fff;
+  outline: none;
+}
+
+/* Placeholder styling for editor */
+#editor:empty::before {
+  content: attr(data-placeholder);
+  color: #aaa;
+  pointer-events: none;
+  user-select: none;
+}
+/* When button is active, show blue border and light blue background */
+.toolbar button.active {
+  border: 2px solid rgb(69, 117, 180);
+  background-color: #d0e7ff;
+}
